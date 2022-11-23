@@ -15,8 +15,8 @@ rsconnect::deployApp("~/Desktop/STAT545/shiny_app/TrackToZero")
 font_add(family = "candara", regular = "candara.ttf", bold = "candara-bold.ttf")
 showtext_auto()
 
-#ghg_emissions<- read_xlsx("~/Desktop/STAT545/shiny_app/ghg_emissions.xlsx")
-#country_ghg <- read_xlsx("~/Desktop/STAT545/shiny_app/country_ghg.xlsx")
+#ghg_emissions<- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/ghg_emissions.xlsx")
+#country_ghg <- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/country_ghg.xlsx")
 continent_ghg<- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/continent_ghg.xlsx")
 continent_world_ghg <- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/continent_world_ghg.xlsx")
 
