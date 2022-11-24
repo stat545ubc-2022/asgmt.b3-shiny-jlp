@@ -2,20 +2,23 @@ shinyUI(
 
   fluidPage(
     theme = shinytheme("flatly"),
-    titlePanel("TrackToZero - Global Emissions Navigator"),
-    h5("The Countdown to Net-Zero Is On!"),
+    titlePanel("TrackToZero - Global Emissions Navigator"), #Title and caption description of my app
+    h5("The Countdown to Net-Zero Is On!"), #Minor text under title panel 
     
-    navbarPage(
-      "Let's explore global GHG emissions data!",
-      tabPanel("About", 
-               imageOutput("warmingstripes_img", width = "100%", height = "150px"),
+    #This is the function under which all contents of the Navigation Bar will be defined/indicated
+    navbarPage(         
+      "Let's explore global GHG emissions data!", #Text string at the left of the NavBar (non-interactive)
+      tabPanel("About", # First click-able Navigation Bar Button: Corresponding to the "About", homepage of this app.
+               imageOutput("warmingstripes_img", width = "100%", height = "150px"), # Climate stripes image spanning across the top of the entire page
                br(),
                
-               sidebarPanel(width = 5, 
+               # Sidebar panel created to separate the hockey stick image from the main block of text (width = 5/12):
+               sidebarPanel(width = 5,  
                             imageOutput("hockeystick_img", height = "100%"),
                             h5(em("Illustration of the climate hockey stick graph of rising global surface temperatures."))),
                
-               mainPanel(width = 7,
+               # Main block of text introducing what this app. is and how it works (to the right of the sidebar in the page layout; width = 7/12)
+               mainPanel(width = 7, 
                          h3("What is TrackToZero?"),
                          textOutput("overall_intro1"),
                          br(),
@@ -41,25 +44,28 @@ shinyUI(
                ) 
       ),
       
-      navbarMenu("Navigator",
+      # Second click-able Navigation Bar Button: Corresponding to the most important plots & interactive navigation features of this app.
+      navbarMenu("Navigator", # using 'navbarMenu( )' allows us to create a drop-drown menu to display numerous sub-options
                  
-                 tabPanel("By sector",
-                          sidebarLayout(
+                 tabPanel("By sector", # Among the Navigation options: Option #1 is *by sector*
+                          sidebarLayout( #To create a separate column/section for the user toggles (e.g., slider, drop-down selections), we use a sidebarLayout
                             sidebarPanel(
+                              #sliderInput allows users to select the range of time displayed (anywhere within the dataset's range of 1990~2019)
                               sliderInput("timeInput", "Year", 1990, 2020, 
                                           value = c(1997,2007)),
-                              selectInput("continentInput", label = h3("Continent / Region"), 
+                              #selectInput below gives users the option to select to view data from any specific continent or the entire World 
+                              selectInput("continentInput", label = h3("Continent / Region"),  
                                           choices = list("Asia", "Africa", "Europe", "Oceania", "North America", "South America", "World"), 
                                           selected = 1)
                             ),
                             mainPanel(
-                              tabsetPanel(
-                                
+                              tabsetPanel( #A tabset is used here in order to split the outputs relevant to "By Sector" in to separate displays 
+                                              #(though all connected to the same interactive user input from the side panel)
                                 tabPanel("Plot", plotOutput("emissions_timeseries", width = "100%", height = "500px")), 
                                 
                                 tabPanel("Table", DT::DTOutput("data_table", width = "95%")),
                                 
-                                tabPanel("Background",
+                                tabPanel("Background", #A glossary explaining how each of the *economic sectors* are defined in this data
                                          br(),
                                          textOutput("background"),
                                          br(),
@@ -98,10 +104,11 @@ shinyUI(
                           ) # end of sidebarLayout
                  ),
                  
-                 tabPanel("By continent",
+                 tabPanel("By continent", # Among the Navigation options: Option #2 is *by continent*
                           dygraphOutput("dygraph_timeseries", width = "90%", height = "600px"))
       ),
       
+      # Third click-able Navigation Bar Button: Navigates to page detailing all of the original data sources used in the development of this app.
       tabPanel("Data Sources", 
                mainPanel(
                  h3(tags$b("Where does the data come from?")),
@@ -126,6 +133,7 @@ shinyUI(
              )
             ), 
       
+      # Fourth and final click-able Navigation Bar Button: Navigates to page with some information about me and why I built Tthis rackToZero App.
       tabPanel("Team", 
                mainPanel(imageOutput("selfie_img", height = "300px", width = "300px"),
                          h2("Jaden L. Phillips"),

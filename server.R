@@ -86,25 +86,19 @@ shinyServer(function(input, output) {
     renderDygraph({
       filtered_data_dy() %>%
         dygraph(main = "Timeseries of GHG Emissions Across Continents", width = 700, height = 500) %>% 
-        
         dyAxis("x", label = "Year", drawGrid = TRUE, 
                axisLabelFontSize = 13) %>%
         dyAxis("y", label = "Annual Total GHG Emissions (Mt CO₂e)", pixelsPerLabel=40, 
                axisLabelFontSize = 13) %>%
-        
         dyLegend(show = "always", width = 200, labelsSeparateLines = TRUE) %>%
-        
         dyHighlight(highlightCircleSize = 5, highlightSeriesBackgroundAlpha = 0.4, hideOnMouseOut = FALSE)  %>%
-        
         dyCrosshair(direction = "vertical") %>%
-        
         dyOptions(strokeWidth = 2.5,
                   colors = RColorBrewer::brewer.pal(6, "Spectral"), 
                   colorSaturation = 0.8,
                   axisLineColor = "navy", 
                   gridLineColor = "lightblue", 
                   digitsAfterDecimal = 0) 
-      
     })
   
   output$background <- renderText({
@@ -134,35 +128,28 @@ shinyServer(function(input, output) {
         #})
 
   
-  
 # TEAM
   
   output$selfie_img <-renderImage({
     list(src = "www/selfie_img.png", width = 300, height = 300)
   }, deleteFile = F)
   
-  
   output$our_team1 <- renderText({
-    
-    "Hello, creatures of the internet! I am a climate activist and MSc student studying Environmental Science and climate change communcation at the University fo British Columbia (UBC) in Vancouver, Canada. All of the design and code for this app are created in RStudio version 2022.07.2+576 with the Shiny Web App."
-    
+    "Hello, creatures of the internet! I am a climate activist and MSc student studying Environmental Science and climate change communcation at the University of
+    British Columbia (UBC) in Vancouver, Canada. All of the design and code for this app are created in RStudio version 2022.07.2+576 with the Shiny Web App."
   })
   
   output$our_team2 <- renderText({
-    
     "Climate change, arguably the greatest challenge of our generation and of the 21st century, is driven by human-caused greenhouse gas (GHG) emissions.
     Addressing climate change is a wicked problem and it will take all of us. 
     It is therefore critical that the trajectory of global and national emissions are made easily accessible to anyone. 
     This simple but interactive Shiny App. was designed with the belief that increasing awareness and basic climate change literacy is an important starting point. 
     Only if people are aware of the problem of rising emissions and can see the data for themselves will they want to join the tide of changemakers to address this challenge together."
-    
   })
   
   output$thank_note <- renderText({
-    
     "Thank you for your attention to my project and the climate crisis!
     The time for climate action is now!"
-    
   })
   
 })
