@@ -11,7 +11,7 @@ library(extrafont)
 library(showtext)
 library(here)
 library(rsconnect)
-
+library(shinytest)
 
 font_add(family = "candara", regular = "candara.ttf", bold = "candara-bold.ttf")
 showtext_auto()
