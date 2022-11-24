@@ -10,11 +10,9 @@ library(readxl)
 library(extrafont)
 library(showtext)
 library(here)
-library(shinyPagerUI)
+library(rsconnect)
 
-
-#library(rsconnect)
-#rsconnect::deployApp("~/Desktop/STAT545/shiny_app/TrackToZero")
+rsconnect::deployApp()
 
 font_add(family = "candara", regular = "candara.ttf", bold = "candara-bold.ttf")
 showtext_auto()

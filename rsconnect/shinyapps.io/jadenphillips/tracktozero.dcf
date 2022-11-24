@@ -5,7 +5,9 @@ account: jadenphillips
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 7713566
-bundleId: 6549199
+bundleId: 6549224
 url: https://jadenphillips.shinyapps.io/tracktozero/
-when: 1669257569.39002
-lastSyncTime: 1669257569.39013
+when: 1669258668.23352
+lastSyncTime: 1669258668.23353
+asMultiple: FALSE
+asStatic: FALSE
