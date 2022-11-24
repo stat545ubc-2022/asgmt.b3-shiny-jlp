@@ -10,14 +10,17 @@ library(readxl)
 library(extrafont)
 library(showtext)
 library(here)
-library(rsconnect)
-rsconnect::deployApp("~/Desktop/STAT545/shiny_app/TrackToZero")
+library(shinyPagerUI)
+
+
+#library(rsconnect)
+#rsconnect::deployApp("~/Desktop/STAT545/shiny_app/TrackToZero")
 
 font_add(family = "candara", regular = "candara.ttf", bold = "candara-bold.ttf")
 showtext_auto()
 
-continent_ghg <- read_xlsx(here::here("continent_ghg.xlsx"))
-continent_world_ghg <- read_xlsx(here::here("continent_world_ghg.xlsx"))
+continent_ghg <- read_xlsx(here::here("data", "continent_ghg.xlsx"))
+continent_world_ghg <- read_xlsx(here::here("data","continent_world_ghg.xlsx"))
 
 tidy_cont_wrl <- continent_world_ghg %>% 
   select(everything(), -Total) %>% 
