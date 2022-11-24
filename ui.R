@@ -116,23 +116,24 @@ shinyUI(
                     em(span("Global Change Data Lab", style = "color:dodgerblue")), "with a mission to publish the 'research and data to make progress against the world’s largest problems'. 
                     With climate change being one of their focus topics, I found Our World In Data's interactive climate data plots incredibly engaging and interesting."),
                  p("The webpage that sparked my interest and nudged me to make this miniature (emissionsfocused) version of thier idea 
-                              in the form of this TrackToZero App can be found here:", a(href="www.ourworldindata.org/greenhouse-gas-emissions", 
-                                                                                         "Our World In Data: Greenhouse Gas Emissions")),
+                              in the form of this TrackToZero App can be found here:", 
+                   a(href="https://ourworldindata.org/greenhouse-gas-emissions",
+                     "Our World In Data: Greenhouse Gas Emissions")),
                  p( "However, Our World In Data is not the original source of these emissions data. 
                     In fact, the raw data was actually retrieved from ", em(span("CLIMATE WATCH", style = "color:dodgerblue")), 
                    ", an open data platform managed by the", em(span("World Resources Institute", style = "color:dodgerblue")), 
                    "designed to help stakeholders gather the data to compare, analyze and evaluate countries’ efforts to address climate change."),
                 h4(tags$b("Links to Data sources:")),
-                p(strong(a(href="www.ourworldindata.org/greenhouse-gas-emissions","RAW DATA", style = "font-size:16px; color:purple")),
-                        ": The Data Explorer including access to all of the raw emissions data used for this application can be found here (available for free download)"), 
-                p(strong(a(href="https://www.climatewatchdata.org/data-explorer/historical-emissions?historical-emissions-data-sources=cait&historical-emissions-gases=all
-                           -ghg&historical-emissions-regions=All%20Selected&historical-emissions-sectors=total-including-lucf%2Ctotal-including-lucf&page=1&sort_col=sector
-                           &sort_dir=ASC#meta", "METADATA", style = "font-size:16px; color:purple")),
-                        ": The Metadata with explanations of sources and data collection details for this Climate Watch Historical GHG Emissions dataset 
-                        (previously published through CAIT Climate Data Explorer) can be found here")
+                p(strong(a(href="https://www.climatewatchdata.org/data-explorer/historical-emissions?historical-emissions-data-sources=cait&historical-emissions-gases=all-ghg&historical-emissions-regions=All%20Selected&historical-emissions-sectors=total-including-lucf%2Ctotal-including-lucf&page=1&sort_col=sector&sort_dir=ASC#data",
+                           "RAW DATA", style = "font-size:16px; color:purple")),
+                           ": The Data Explorer including access to all of the raw emissions data used for this application can be found here (available for free download)"), 
+                p(strong(a(href="https://www.climatewatchdata.org/data-explorer/historical-emissions?historical-emissions-data-sources=cait&historical-emissions-gases=all-ghg&historical-emissions-regions=All%20Selected&historical-emissions-sectors=total-including-lucf%2Ctotal-including-lucf&page=1&sort_col=sector&sort_dir=ASC#meta",
+                            "METADATA", style = "font-size:16px; color:purple")),
+                            ": The Metadata with explanations of sources and data collection details for this Climate Watch Historical GHG Emissions dataset 
+                            (previously published through CAIT Climate Data Explorer) can be found here")
              )
             ), 
-      
+      https://www.climatewatchdata.org/data-explorer/historical-emissions?historical-emissions-data-sources=cait&historical-emissions-gases=all-ghg&historical-emissions-regions=All%20Selected&historical-emissions-sectors=total-including-lucf%2Ctotal-including-lucf&page=1&sort_col=sector&sort_dir=ASC#meta
       # Fourth and final click-able Navigation Bar Button: Navigates to page with some information about me and why I built Tthis rackToZero App.
       tabPanel("Team", 
                mainPanel(imageOutput("selfie_img", height = "300px", width = "300px"),
