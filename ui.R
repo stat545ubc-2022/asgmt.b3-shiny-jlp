@@ -133,7 +133,7 @@ shinyUI(
                             (previously published through CAIT Climate Data Explorer) can be found here")
              )
             ), 
-      https://www.climatewatchdata.org/data-explorer/historical-emissions?historical-emissions-data-sources=cait&historical-emissions-gases=all-ghg&historical-emissions-regions=All%20Selected&historical-emissions-sectors=total-including-lucf%2Ctotal-including-lucf&page=1&sort_col=sector&sort_dir=ASC#meta
+      
       # Fourth and final click-able Navigation Bar Button: Navigates to page with some information about me and why I built Tthis rackToZero App.
       tabPanel("Team", 
                mainPanel(imageOutput("selfie_img", height = "300px", width = "300px"),
