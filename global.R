@@ -16,8 +16,8 @@ library(rsconnect)
 font_add(family = "candara", regular = "candara.ttf", bold = "candara-bold.ttf")
 showtext_auto()
 
-continent_ghg <- read_xlsx(here::here("data", "continent_ghg.xlsx"))
-continent_world_ghg <- read_xlsx(here::here("data","continent_world_ghg.xlsx"))
+continent_ghg <- read_xlsx("data/continent_ghg.xlsx")
+continent_world_ghg <- read_xlsx("data/continent_world_ghg.xlsx")
 
 tidy_cont_wrl <- continent_world_ghg %>% 
   select(everything(), -Total) %>% 
