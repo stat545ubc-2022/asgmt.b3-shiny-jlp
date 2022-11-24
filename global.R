@@ -9,6 +9,7 @@ library(viridis)
 library(readxl)
 library(extrafont)
 library(showtext)
+library(here)
 library(rsconnect)
 rsconnect::deployApp("~/Desktop/STAT545/shiny_app/TrackToZero")
 
@@ -17,8 +18,8 @@ showtext_auto()
 
 #ghg_emissions<- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/ghg_emissions.xlsx")
 #country_ghg <- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/country_ghg.xlsx")
-continent_ghg<- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/continent_ghg.xlsx")
-continent_world_ghg <- read_xlsx("~/Desktop/STAT545/shiny_app/TrackToZero/continent_world_ghg.xlsx")
+continent_ghg<- read_xlsx(here::here("continent_ghg.xlsx"))
+continent_world_ghg <- read_xlsx(here::here("continent_world_ghg.xlsx"))
 
 #tidy_country_emissions <- country_ghg %>%
 #    pivot_longer(Agriculture:`Aviation and shipping`, names_to = "Sector", values_to = "Emissions") 
