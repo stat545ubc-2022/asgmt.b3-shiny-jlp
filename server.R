@@ -109,24 +109,8 @@ shinyServer(function(input, output) {
   
   
 # DATA SOURCES - 
-## Did not end up using these as the contents of this Data Sources page were directly provided/defined in the ui.R input file
-       # output$my_sources1 <- renderText({
-       #         "The idea for this Shiny application was originally inspired by Our World In Data, a project of the UK-based non-profit 
-       #         Global Change Data Lab, with a mission to publish the 'research and data to make progress against the world’s largest problems'. 
-       #         With climate change being one of their focus topics, I found Our World In Data's interactive climate data plots incredibly engaging and interesting."
-       # })
-          
-       # output$my_sources2 <- renderText({
-       #       "The webpage that sparked my interest and nudged me to make this miniature (emissionsfocused) version of thier idea 
-       #         in the form of this TrackToZero App can be found here:"
-        #})
-        
-        #output$my_sources3 <- renderText({
-        #  "However, Our World In Data is not the original source of these emissions data. 
-        #   In fact, the raw data was actually retrieved from CLIMATE WATCH, an open data platform managed by World Resources Institute 
-        #   designed to help stakeholders gather the data to compare, analyze and evaluate countries’ efforts to address climate change."
-        #})
-
+## Did not end up using any code here as the contents of this Data Sources page were directly provided/defined in the ui.R input file
+       
   
 # TEAM
   
