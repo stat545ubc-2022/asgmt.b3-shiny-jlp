@@ -1,7 +1,7 @@
 # TrackToZero: Greenhouse Gas Emissions Navigator
 Quick access to the app: https://jadenphillips.shinyapps.io/tracktozero/
 
-This is STATS545 Assignment #3's Option B - my own Shiny app
+This is STATS545 B Assignment #4's Option C - upgrading my own Shiny app
 
 
 ### What is the TrackToZero App?
