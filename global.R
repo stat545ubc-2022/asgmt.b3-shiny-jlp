@@ -1,15 +1,14 @@
 library(shiny)
 library(tidyverse)
-library(DT)
-library(dygraphs)
-library(shinydashboard)
-library(shinythemes)
-library(hrbrthemes)
-library(viridis)
-library(readxl)
-library(extrafont)
-library(showtext)
-library(here)
+library(DT) #provides an R interface to the JavaScript library DataTables, allowing us to make interactive data tables
+library(dygraphs) #dygraph for interactive plotting of time series data
+library(shinydashboard) #to make dynamic dashboards with Shiny UI
+library(shinythemes) #package containing Bootstrap themes packaged for use with Shiny applications: in this app. we use the `flatly` theme
+library(hrbrthemes) #for theme_ipsum
+library(viridis) #for viridis color scale
+library(readxl) #to import raw data files from Excel
+library(extrafont) #to embed fonts other than the basic Postscript fonts: `candara` font in this case
+library(showtext) #to use non-standard fonts more easily in R graphs
 library(rsconnect)
 library(shinytest)
 
