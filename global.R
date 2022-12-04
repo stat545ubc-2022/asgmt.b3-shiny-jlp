@@ -12,7 +12,7 @@ library(showtext) #to use non-standard fonts more easily in R graphs
 library(rsconnect)
 library(shinytest)
 
-font_add(family = "candara", regular = "candara.ttf", bold = "candara-bold.ttf")
+font_add(family = "candara", regular = "fonts/candara.ttf", bold = "fonts/candara-bold.ttf")
 showtext_auto()
 
 continent_ghg <- read_xlsx("data/continent_ghg.xlsx")
